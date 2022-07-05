@@ -11,18 +11,38 @@
 // # BONUS 2:
 // Organizzare i singoli membri in card/schede e ispirarci alle grafiche in allegato
 
-
-
+// variabili
+const teamList = document.getElementById('team-list')
+let stringaDaStampare = "";
 // # MILESTONE 0:
 // Creare l’array di oggetti con le informazioni fornite.
 const team = [
-    {'nome': "Wayne Barnett" , 'ruolo': "Founder & CEO" , 'foto': "wayne-barnett-founder-ceo.jpg"},
-    {'nome': "Angela Caroll" , 'ruolo':	"Chief Editor"  , 'foto': "angela-caroll-chief-editor.jpg"},
-    {'nome': "Walter Gordon" , 'ruolo':	"Office Manager"  , 'foto': "walter-gordon-office-manager.jpg"},
-    {'nome': "Angela Lopez" , 'ruolo':	"Social Media Manager"  , 'foto': "angela-lopez-social-media-manager.jpg"},
-    {'nome': "Scott Estrada" , 'ruolo':	"Developer"  , 'foto': "scott-estrada-developer.jpg"},
-    {'nome': "Barbara Ramos" , 'ruolo':	"Graphic Designer"  , 'foto': "barbara-ramos-graphic-designer.jpg"},
+    {'Nome': "Wayne Barnett" , 'Ruolo': "Founder & CEO" , 'Foto': "wayne-barnett-founder-ceo.jpg"},
+    {'Nome': "Angela Caroll" , 'Ruolo':	"Chief Editor"  , 'Foto': "angela-caroll-chief-editor.jpg"},
+    {'Nome': "Walter Gordon" , 'Ruolo':	"Office Manager"  , 'Foto': "walter-gordon-office-manager.jpg"},
+    {'Nome': "Angela Lopez" , 'Ruolo':	"Social Media Manager"  , 'Foto': "angela-lopez-social-media-manager.jpg"},
+    {'Nome': "Scott Estrada" , 'Ruolo':	"Developer"  , 'Foto': "scott-estrada-developer.jpg"},
+    {'Nome': "Barbara Ramos" , 'Ruolo':	"Graphic Designer"  , 'Foto': "barbara-ramos-graphic-designer.jpg"},
 ]
+console.log(team)
+// # MILESTONE 1:
+// Stampare su console le informazioni di nome, ruolo e la stringa della foto
+
+for (let i = 0; i < team.length; i++) {
+    const element = team[i];
+
+    // # MILESTONE 2:
+    // Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+    for(let key in element){
+        console.log(element[key])
+        teamList.innerHTML += '<li>' + key + " "+  " : " +  (element[key]) +  "<br>" + '</li>'
+        
+    }
+
+    
+}
+
 
 
 
